@@ -14,6 +14,7 @@ install.packages(packages)
 library(easypackages) #easypackages me permite cargar varios paquetes a la vez
 libraries(packages)
 
+library(tidyverse)
 
 
 # 1. Importar base de datos -----------------------------------------------
@@ -81,10 +82,12 @@ paste("Curso", "R", "UCE", sep = "-") # Defino el separador del texto
 
 # se agregam las filas debajo 
 
+install.packages('gtools')
 df1 <- data.frame(A= 1:3, B= letters[1:3])
 df2 <- data.frame(A= 1:4, B= letters[1:4])
 resultado <- rbind(df1,df2)
 resultado
+view(resultado)
 
 ### 2.3.2. Función cbind
 
